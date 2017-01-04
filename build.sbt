@@ -8,5 +8,6 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "room-watcher-pusher",
+    assemblyJarName in assembly := "room-watcher-pusher.jar",
     libraryDependencies += scalaTest % Test
   )
