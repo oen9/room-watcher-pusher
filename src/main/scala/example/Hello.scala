@@ -1,7 +1,6 @@
 package example
 
-object Hello extends Greeting with App {
-  println(greeting)
+object Hello extends Greeting {
 }
 
 trait Greeting {
