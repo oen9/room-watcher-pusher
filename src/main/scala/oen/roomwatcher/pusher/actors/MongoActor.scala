@@ -21,7 +21,7 @@ class MongoActor(mongoUri: String) extends Actor {
     db <- con.database(dn)
   } yield db
 
-  val col : Future[BSONCollection] = database.map(_.collection("test01Col"))
+  val col : Future[BSONCollection] = database.map(_.collection("sensorRecords"))
 
   override def receive: Receive = {
     case s: SensorRecord =>
