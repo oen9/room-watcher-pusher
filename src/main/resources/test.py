@@ -1,2 +1,2 @@
-print("Humidity:36%")
-print("Temperature:23C")
+print("H: 33")
+print("T: 24")

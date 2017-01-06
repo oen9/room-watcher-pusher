@@ -14,7 +14,7 @@ val customConf = ConfigFactory.parseString(
 val cfg = ConfigFactory.load(customConf)
 cfg.getString("MONGO_URL")
 
-val sensorRegex = """Humidity:(\d+)%\nTemperature:(\d+)C\n""".r
+val sensorRegex = """\nH: (\d+)\nT: (\d+)\n""".r
 
 def parseSensorData(data: String): Option[(String, String)] = {
   data match {
@@ -24,8 +24,9 @@ def parseSensorData(data: String): Option[(String, String)] = {
 }
 
 val exampleSensorData =
-  """Humidity:36%
-    |Temperature:23C
+  """
+    |H: 36
+    |T: 23
     |""".stripMargin
 parseSensorData(exampleSensorData)
 

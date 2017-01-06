@@ -21,7 +21,7 @@ object Application extends App {
 
   val cancellable = system.scheduler.schedule(
     0 seconds,
-    5 seconds,
+    5 minutes,
     roomSensorsActor,
     RoomSensorsActor.Tick)
 

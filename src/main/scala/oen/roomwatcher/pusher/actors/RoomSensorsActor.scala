@@ -11,7 +11,7 @@ import scala.util.matching.Regex
 
 class RoomSensorsActor(mongoActor: ActorRef, pythonScript: String) extends Actor {
 
-  val sensorRegex: Regex = """Humidity:(\d+)%\nTemperature:(\d+)C\n""".r
+  val sensorRegex: Regex = """\nH: (\d+)\nT: (\d+)\n""".r
 
   override def receive: Receive = {
     case Tick =>
